@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,8 @@
 		BD24F5BB2555928A00ED32FE /* EventsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD24F5B92555928A00ED32FE /* EventsViewModelTests.swift */; };
 		BD24F5C02555929B00ED32FE /* FavoriteProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD24F5BF2555929B00ED32FE /* FavoriteProviderTests.swift */; };
 		BD24F5CD255594B400ED32FE /* EventsSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD24F5CC255594B400ED32FE /* EventsSwiftUIUITests.swift */; };
+		CEFA6DA42556F7BB00A94160 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFA6DA32556F7BB00A94160 /* MainTableView.swift */; };
+		CEFA6DA92556F89B00A94160 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFA6DA82556F89B00A94160 /* FavoriteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		BD24F5CC255594B400ED32FE /* EventsSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsSwiftUIUITests.swift; sourceTree = "<group>"; };
 		BD24F5CE255594B400ED32FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C55BBD5051A2F91950AC07A6 /* Pods_EventsSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EventsSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEFA6DA32556F7BB00A94160 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
+		CEFA6DA82556F89B00A94160 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +129,6 @@
 				2FB6D3C33D2DEADDA9C29A3E /* Pods-EventsSwiftUITests.debug.xcconfig */,
 				436278922ADD59BD2EC0E566 /* Pods-EventsSwiftUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -225,6 +228,7 @@
 			children = (
 				BD24F59B255591EF00ED32FE /* Favorite */,
 				BD24F59A255591E800ED32FE /* Events */,
+				CEFA6DA32556F7BB00A94160 /* MainTableView.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -242,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				BD24F59F2555921200ED32FE /* FavoriteViewModel.swift */,
+				CEFA6DA82556F89B00A94160 /* FavoriteView.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -515,8 +520,10 @@
 				BD24F5952555914600ED32FE /* NetworkProvider.swift in Sources */,
 				BD24F55A255586B100ED32FE /* EventsSwiftUIApp.swift in Sources */,
 				BD24F59D255591F900ED32FE /* EventsViewModel.swift in Sources */,
+				CEFA6DA42556F7BB00A94160 /* MainTableView.swift in Sources */,
 				BD24F5882555911600ED32FE /* DependencyContainer.swift in Sources */,
 				BD24F5822555906E00ED32FE /* UIColor + Ext.swift in Sources */,
+				CEFA6DA92556F89B00A94160 /* FavoriteView.swift in Sources */,
 				BD24F5A02555921200ED32FE /* FavoriteViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

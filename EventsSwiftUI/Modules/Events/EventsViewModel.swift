@@ -7,13 +7,14 @@
 
 import RxCocoa
 import RxSwift
+import SwiftUI
 
-struct EventsViewModel {
+class EventsViewModel: ObservableObject {
     
     //MARK: - Properties
     
     let objects = PublishRelay<[EventObject]>()
-    let events = PublishRelay<[EventItem]>()
+    @State var events = PublishRelay<[EventItem]>()
     let favorites = PublishRelay<Set<EventItem>>()
     
     let loading = BehaviorRelay<Bool>(value: true)
@@ -56,7 +57,7 @@ struct EventsViewModel {
             .disposed(by: disposeBag)
         
         refreshObjects.subscribe(onNext: { _ in
-            requestItems(url: URLPath.base.rawValue)
+            self.requestItems(url: URLPath.base.rawValue)
         }).disposed(by: disposeBag)
                    
         timer.bind(to: refreshObjects)
@@ -75,11 +76,11 @@ struct EventsViewModel {
         networkProvider.request(url: url) { result in
             switch result {
             case let .success(events):
-                favoriteProvider.updateEvents(events: events.events.event)
+                self.favoriteProvider.updateEvents(events: events.events.event)
             case let .failure(error):
                 self.error.accept(error.localizedDescription)
             }
-            loading.accept(false)
+            self.loading.accept(false)
         }
     }
 }

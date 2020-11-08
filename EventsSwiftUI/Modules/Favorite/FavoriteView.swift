@@ -1,21 +1,15 @@
 //
-//  ContentView.swift
+//  FavoriteView.swift
 //  EventsSwiftUI
 //
-//  Created by Uladzislau Volkau on 11/6/20.
+//  Created by user on 11/7/20.
 //
 
 import SwiftUI
 
-struct EventsView: View {
-    @ObservedObject var viewModel: EventsViewModel
-    
-    init(viewModel: EventsViewModel) {
-        self.viewModel = viewModel
-    }
-    
+struct FavoriteView: View {
     var body: some View {
-        List(0..<5) { item in
+        List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
             VStack(alignment: .leading) {
                 Text("Test text")
                     .font(.system(size: 13, weight: .medium, design: .default))
@@ -35,9 +29,8 @@ struct EventsView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct FavoriteView_Previews: PreviewProvider {
     static var previews: some View {
-        let container = DependencyContainer()
-        EventsView(viewModel: container.makeEventsViewModel())
+        FavoriteView()
     }
 }

@@ -11,7 +11,9 @@ import SwiftUI
 struct EventsSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            EventsView()
+            MainTableView()
+            
         }
     }
 }
+
